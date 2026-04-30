@@ -1,0 +1,21 @@
+# Java
+backend/target/
+backend/.mvn/
+backend/*.jar
+backend/*.war
+
+# Node
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.log
+
+# Sensitive
+.env
+frontend/.env
+backend/src/main/resources/application.properties.local
