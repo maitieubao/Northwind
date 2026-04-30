@@ -11,14 +11,13 @@ services:
       - key: SPRING_DATASOURCE_USERNAME
         value: postgres.qufrlaajxqfebtvgdnaj
       - key: SPRING_DATASOURCE_PASSWORD
-        sync: false # Render sẽ yêu cầu bạn nhập mật khẩu này trên giao diện để bảo mật
+        sync: false
       - key: PORT
         value: 8080
 
   # Frontend Static Site
-  - type: web
+  - type: static
     name: haibazo-frontend
-    runtime: static
     rootDir: frontend
     plan: free
     buildCommand: npm install && npm run build
@@ -29,4 +28,3 @@ services:
           name: haibazo-backend
           type: web
           property: host
-        # Hậu tố /api sẽ được xử lý trong axios.js hoặc bạn có thể nối chuỗi ở đây
