@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../stylesheet/navbar.css" />
+    <link rel="stylesheet" href="../stylesheet/leftcontainer.css" />
+    <link rel="stylesheet" href="loginform.css" />
+    <link rel="stylesheet" href="validate.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Northwind Login</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <div id="navbar"></div>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+      <!-- LEFT SIDE -->
+      <div class="container__left">
+        
+      </div>
+
+      <!-- RIGHT SIDE (FORM) -->
+      <div class="container__right">
+        <form class="container__form" novalidate>
+          <h1 class="container__form-title">Welcome back</h1>
+          <p class="container__form-subtitle">
+            Sign in to continue to your workspace.
+          </p>
+          <div class="container__form-fast-login">
+            <button class="container__form-google-login">
+              <img src="../Assets/GoogleIcon.svg" alt="" />Continue with Google
+            </button>
+            <button class="container__form-github-login">
+              <img src="../Assets/GitHubIcon.svg" alt="" />Continue with GitHub
+            </button>
+          </div>
+          <div class="didiver"><img src="../Assets/Divider.svg" alt="" /></div>
+          <div class="container__form-group">
+            <label for="email" class="container__form-label">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="container__form-input"
+              placeholder="you@company.com"
+              required
+            />
+          </div>
+
+          <div class="container__form-group">
+            <label for="password" class="container__form-label">Password</label>
+            <div class="container__form-input-wrapper">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="container__form-input"
+                placeholder="Enter your password"
+                required
+              />
+              <button
+                type="button"
+                class="container__form-input-icon"
+                id="togglePassword"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="20"
+                  height="20"
+                >
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="container__form-options">
+            <label class="container__form-checkbox">
+              <input
+                type="checkbox"
+                id="remember"
+                class="container__form-checkbox-input"
+              />
+              <span class="container__form-checkbox-label">Remember me</span>
+            </label>
+            <a href="#" class="container__form-forgot">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="container__form-button">Sign in</button>
+          <p class="container__form-sign-up">
+            Don't have an account?
+            <a class="container__form-sign-up-text">Sign up</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <script src="../js/form-validation.js"></script>
+    <script type="module" src="../js/main.js"></script>
+  </body>
+</html>

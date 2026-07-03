@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="registerform.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Northwind Login</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <ul class="navbar__menu">
+        <li class="navbar__menu-item">
+          <a href="loginform.html" class="navbar__menu-link">1 · Login</a>
+        </li>
+        <li class="navbar__menu-item">
+          <a href="registerform.html" class="navbar__menu-link">2 · Register</a>
+        </li>
+        <li class="navbar__menu-item">
+          <a href="#" class="navbar__menu-link">3 · Forgot password</a>
+        </li>
+        <li class="navbar__menu-item">
+          <a href="#" class="navbar__menu-link">4 · Reset password</a>
+        </li>
+        <li class="navbar__menu-item">
+          <a href="#" class="navbar__menu-link">5 · Verify email</a>
+        </li>
+        <li class="navbar__menu-item">
+          <a href="#" class="navbar__menu-link">6 · Success</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+      <!-- LEFT SIDE -->
+      <div class="container__left">
+        <div class="container__circle container__circle--big"></div>
+        <div class="container__circle container__circle--small"></div>
+
+        <a href="#" class="container__logo">
+          <img src="Assets/Logo.svg" alt="Logo" class="container__logo-img" />
+          <span class="container__logo-text">Northwind</span>
+        </a>
+
+        <div class="container__title-group">
+          <div class="container__title">
+            <p class="container__title--big">
+              One account for everything your team ships.
+            </p>
+            <p class="container__title--sm">
+              Secure sign-in, instant onboarding, and a verified inbox — all in
+              a few clicks.
+            </p>
+          </div>
+          <div class="container__title-bottom">
+            <p class="container__title-bottom-item">
+              <img src="Assets/CircleTick.svg" alt="Icon" /> Encrypted credentials
+            </p>
+            <p class="container__title-bottom-item">
+              <img src="Assets/CircleTick.svg" alt="Icon" /> Email verification
+              built-in
+            </p>
+            <p class="container__title-bottom-item">
+              <img src="Assets/CircleTick.svg" alt="Icon" /> Password recovery flow
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE (FORM) -->
+      <div class="container__right">
+        <form class="container__form" novalidate>
+          <h1 class="container__form-title">Create your account</h1>
+          <p class="container__form-subtitle">
+            Start your 14-day free trial. No card required.
+          </p>
+          <div class="container__form-fast-login">
+            <a class="container__form-google-login">
+              <img src="Assets/GoogleBigIcon.svg" alt="" />Google
+            </a>
+            <a class="container__form-github-login">
+              <img src="Assets/GitHubBigIcon.svg" alt="" />GitHub
+            </a>
+          </div>
+          <div class="didiver"><img src="Assets/Divider.svg" alt="" /></div>
+
+          <div class="container__form-group">
+            <label for="fullname" class="container__form-label">Full name</label>
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              class="container__form-input"
+              placeholder="Avery Johnson"
+              required
+            />
+          </div>
+
+          <div class="container__form-group">
+            <label for="email" class="container__form-label">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="container__form-input"
+              placeholder="you@company.com"
+              required
+            />
+          </div>
+
+          <div class="container__form-group">
+            <label for="password" class="container__form-label">Password</label>
+            <div class="container__form-input-wrapper">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="container__form-input"
+                placeholder="Create a password"
+                required
+              />
+              <button
+                type="button"
+                class="container__form-input-icon"
+                id="togglePassword"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="20"
+                  height="20"
+                >
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="container__form-group">
+            <label for="confirm-password" class="container__form-label"
+              >Confirm password</label
+            >
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              class="container__form-input"
+              placeholder="Re-enter your password"
+              required
+            />
+          </div>
+
+          <div class="container__form-options">
+            <label class="container__form-checkbox">
+              <input
+                type="checkbox"
+                id="remember"
+                class="container__form-checkbox-input"
+              />
+              <p class="container__form-checkbox-label">
+                I agree to the
+                <a class="container__form-checkbox-label--highlight"
+                  >Term of Service</a>
+                and
+                <a class="container__form-checkbox-label--highlight"
+                  >Privacy Policy</
+                >
+              </p>
+            </label>
+          </div>
+
+          <button type="submit" class="container__form-button">Sign in</button>
+
+        </form>
+        <p class="container__form-sign-in-label">Already have an account? <span class="container__form-sign-in-label--highlight">Sign in</span></p>
+
+      </div>
+    </div>
+    <script src="form-validation.js"></script>
+  </body>
+</html>
