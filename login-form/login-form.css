@@ -1,0 +1,283 @@
+/* ========== RESET & BASE ========== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f0f2f5;
+  padding: 20px;
+}
+
+/* ========== MAIN CONTAINER ========== */
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  min-height: 695px;
+  margin: 0 auto;
+  border-radius: 16px;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ========== Fast Login ==========*/
+.container__form-fast-login {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container__form-google-login,
+.container__form-github-login {
+  padding: 10px 16px;
+  border-radius: 12px;
+  margin: 0px 0px 8px 0px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  width: 172px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  color: #111827;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  font-style: bold;
+}
+
+.didiver {
+  text-align: center;
+}
+
+/* ========== RIGHT SIDE (FORM) ========== */
+.container__right {
+  flex: 6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 40px;
+  background: #ffffff;
+  position: relative;
+  z-index: 5; /* CAO HƠN circles (0) → form đè lên circles */
+}
+
+/* ========== FORM ========== */
+.container__form {
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  z-index: 10; /* Cao nhất */
+}
+
+.container__form-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.container__form-subtitle {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 32px;
+}
+
+/* Form Groups */
+.container__form-group {
+  margin-bottom: 20px;
+}
+
+.container__form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.container__form-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.2s ease;
+  background: white;
+}
+
+.container__form-input:focus {
+  border-color: #5046e5;
+  box-shadow: 0 0 0 3px rgba(80, 70, 229, 0.1);
+}
+
+.container__form-input::placeholder {
+  color: #adb5bd;
+}
+
+/* Input with icon (password) */
+.container__form-input-wrapper {
+  position: relative;
+}
+
+.container__form-input-wrapper .container__form-input {
+  padding-right: 44px;
+}
+
+.container__form-input-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: #6c757d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container__form-input-icon:hover {
+  color: #5046e5;
+}
+
+/* Form Options */
+.container__form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 24px 0;
+}
+
+.container__form-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.container__form-checkbox-input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #5046e5;
+}
+
+.container__form-checkbox-label {
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  user-select: none;
+}
+
+.container__form-forgot {
+  font-size: 14px;
+  color: #5046e5;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.container__form-forgot:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* Submit Button */
+.container__form-button {
+  width: 100%;
+  height: 48px;
+  background: #5046e5;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(80, 70, 229, 0.3);
+}
+
+.container__form-button:hover {
+  background: #4338d1;
+  box-shadow: 0 6px 16px rgba(80, 70, 229, 0.4);
+  transform: translateY(-1px);
+}
+
+.container__form-button:active {
+  transform: translateY(0);
+}
+
+.container__form-sign-up-text {
+  color: #5046e5;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.container__form-sign-up-text:hover {
+  text-decoration: underline;
+}
+
+.container__form-sign-up {
+  margin: 8px 0px 0px 0px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6b7280;
+}
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      max-width: 100%;
+      min-height: auto;
+      padding: 0 16px 24px;
+    }
+
+    .container__right {
+      padding: 24px 16px;
+    }
+
+    .container__form {
+      max-width: 100%;
+      width: 100%;
+      margin: 0;
+    }
+
+    .container__form-fast-login {
+      flex-direction: column;
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .container__form-google-login,
+    .container__form-github-login {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .container__form-title {
+      font-size: 24px;
+    }
+
+    .container__form-subtitle {
+      font-size: 13px;
+    }
+  }

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".container__form").forEach((form) => {
+  document.querySelectorAll("#container__form").forEach((form) => {
     initSharedValidation(form);
   });
 });
@@ -23,15 +23,15 @@ function initSharedValidation(form) {
   function showError(input, message) {
     if (!input) return;
 
-    const formGroup = input.closest(".container__form-group");
+    const formGroup = document.getElementById(input.id + "-group");
     if (!formGroup) return;
 
     formGroup.classList.add("error");
 
-    let errorText = formGroup.querySelector(".error-message");
+    let errorText = document.getElementById(input.id + "-error");
     if (!errorText) {
       errorText = document.createElement("small");
-      errorText.className = "error-message";
+      errorText.id = input.id + "-error";
       errorText.style.color = "#ef4444";
       errorText.style.fontSize = "12px";
       errorText.style.marginTop = "5px";
@@ -46,11 +46,11 @@ function initSharedValidation(form) {
   function removeError(input) {
     if (!input) return;
 
-    const formGroup = input.closest(".container__form-group");
+    const formGroup = document.getElementById(input.id + "-group");
     if (!formGroup) return;
 
     formGroup.classList.remove("error");
-    const errorText = formGroup.querySelector(".error-message");
+    const errorText = document.getElementById(input.id + "-error");
     if (errorText) {
       errorText.remove();
     }

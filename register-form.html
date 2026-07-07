@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="register-form/register-form.css" />
+    <link rel="stylesheet" href="validate.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Northwind Login</title>
+  </head>
+  <body>
+    <nav>
+      <ul id="navbar__menu">
+        <li>
+          <a href="login-form/login-form.html">1 · Login</a>
+        </li>
+        <li>
+          <a href="register-form.html">2 · Register</a>
+        </li>
+        <li>
+          <a href="forgot-password-form/forgot-password-form.html">3 · Forgot password</a>
+        </li>
+        <li>
+          <a href="reset-password-form/reset-password-form.html">4 · Reset password</a>
+        </li>
+        <li>
+          <a href="verify-gmail-form/verify-gmail-form.html">5 · Verify email</a>
+        </li>
+        <li>
+          <a href="success-form/success-form.html">6 · Success</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div>
+      <div id="container__left">
+        <div></div>
+        <div></div>
+
+        <a href="#">
+          <img src="assets/logo.svg" alt="Logo" />
+          <span>Northwind</span>
+        </a>
+
+        <div>
+          <div>
+            <p>
+              One account for everything your team ships.
+            </p>
+            <p>
+              Secure sign-in, instant onboarding, and a verified inbox — all in
+              a few clicks.
+            </p>
+          </div>
+          <div>
+            <p>
+              <img src="assets/circle-tick.svg" alt="Icon" /> Encrypted credentials
+            </p>
+            <p>
+              <img src="assets/circle-tick.svg" alt="Icon" /> Email verification
+              built-in
+            </p>
+            <p>
+              <img src="assets/circle-tick.svg" alt="Icon" /> Password recovery flow
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <form id="container__form" novalidate>
+          <h1>Create your account</h1>
+          <p>
+            Start your 14-day free trial. No card required.
+          </p>
+          <div>
+            <a>
+              <img src="assets/google-big-icon.svg" alt="" />Google
+            </a>
+            <a>
+              <img src="assets/github-big-icon.svg" alt="" />GitHub
+            </a>
+          </div>
+          <div><img src="assets/divider.svg" alt="" /></div>
+
+          <div id="fullname-group">
+            <label for="fullname">Full name</label>
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              placeholder="Avery Johnson"
+              required
+            />
+          </div>
+
+          <div id="email-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@company.com"
+              required
+            />
+          </div>
+
+          <div id="password-group">
+            <label for="password">Password</label>
+            <div>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Create a password"
+                required
+              />
+              <button
+                type="button"
+                id="togglePassword"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="20"
+                  height="20"
+                >
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div id="confirm-password-group">
+            <label for="confirm-password">Confirm password</label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              placeholder="Re-enter your password"
+              required
+            />
+          </div>
+
+          <div>
+            <label>
+              <input
+                type="checkbox"
+                id="remember"
+              />
+              <p>
+                I agree to the
+                <a>Term of Service</a>
+                and
+                <a>Privacy Policy</a>
+              </p>
+            </label>
+          </div>
+
+          <button type="submit">Sign in</button>
+
+        </form>
+        <p>Already have an account? <span>Sign in</span></p>
+
+      </div>
+    </div>
+    <script src="js/form-validation.js"></script>
+  </body>
+</html>
